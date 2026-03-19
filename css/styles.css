@@ -1,4 +1,122 @@
-html {
-    font-family: "Arial", "Helvetica", sans-serif;
-    font-size: 14px;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+
+.quicksand-font {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Tuodaan ystävällinen fontti Google Fontsista */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+:root {
+  /* Väripaletti */
+  --bg-color: #a4b89b;         /* Pehmeä kermainen tausta */
+  --primary-green: #8DAA91;    /* Rauhoittava salvia */
+  --primary-dark: #6B846E;     /* Tummempi vihreä hover-tiloihin */
+  --happy-yellow: #E9C46A;     /* Iloinen okran keltainen (CTA) */
+  --accent-terracotta: #CE8467; /* Lämmin tehosteväri */
+  --text-main: #333333;        /* Pehmeä hiili */
+  --white: #e2d6b3;
+  
+  /* Pyöristykset - tekevät ilmeestä "pehmeän" */
+  --radius: 16px;
+  --transition: all 0.3s ease;
+}
+
+header {
+    font-family: Quicksand, sans-serif;
+}
+
+main {
+    font-family: Nunito, sans-serif;
+}
+
+footer, button {
+    font-family: Montserrat, sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.6;
+}
+
+/* --- Otsikot --- */
+h1, h2, h3 {
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* --- Kortit (esim. palvelut tai lemmikkiesittelyt) --- */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(141, 170, 145, 0.1);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Painikkeet --- */
+.btn-primary {
+  background-color: var(--happy-yellow);
+  color: var(--text-main);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px; /* Täysin pyöreät päät ovat erittäin kutsuvia */
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #dfb54e; /* Hieman tummempi keltainen */
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* --- Korostukset --- */
+.highlight-text {
+  color: var(--accent-terracotta);
+  font-weight: 700;
+}
+
+/* --- Navigaatio --- */
+nav {
+  background-color: var(--white);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--bg-color);
 }

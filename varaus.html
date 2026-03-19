@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polar Pets - Ajanvaraus</title>
+    <link rel="stylesheet" href="css/varaus.css">
+    <meta name="description" content="Ajanvarauslomake">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="images/polar-pets-logo.png" width="80" height="80" alt="Polar Pets logo">
+                <div class="brand-text">
+                    <h1>Polar Pets</h1>
+                    <p>Eläinlääkäri | Trimmaamo | Lemmikkihotelli</p>
+                </div>
+            </div>
+        
+            <nav>
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="elainlaakari.html">Eläinlääkäri</a></li>
+                    <li><a href="trimmaus.html">Trimmaus</a></li>
+                    <li><a href="hoitola.html">Lemmikkihotelli</a></li>
+                    <li><a href="hinnasto.html">Hinnasto</a></li>
+                    <li><a href="varaus.html" class="nav-button">Ajanvaraus</a></li>
+                </ul>  
+            </nav>
+        </div> 
+    </header>
+     
+    <main>
+        <section class="booking-form">
+            <h2>Ajanvaraus</h2>
+            <p>Täytä alla olevat tiedot, niin olemme sinuun yhteydessä vahvistusta varten.</p>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Omistajan nimi *</label>
+                    <input type="text" id="name" name="name" required placeholder="Etunimi Sukunimi">
+                </div>
+
+            <div class="form-group">
+                <label for="pet">Lemmikin laji *</label>
+                <select id="pet" name="pet" required>
+                    <option value="">--Valitse tästä--</option>
+                    <option value="cat">Kissa</option>
+                    <option value="dog">Koira</option>
+                    <option value="reptile">Matelija (esim. lisko, käärme)</option>
+                    <option value="bird">Lintu</option>
+                    <option value="rodent">Jyrsijä</option>
+                    <option value="other">Joku muu (kirjoita viestikenttään lomakkeen lopussa)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Valitse palvelu *</label>
+                <select id="service" name="service" required>
+                    <option value="">--Valitse tästä--</option>
+                    <option value="vet">Eläinlääkäri</option>
+                    <option value="grooming">Trimmaus</option>
+                    <option value="hotel">Lemmikkihotelli</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Tietoa lemmikistä ja toiveita ajankohdasta</label>
+                <textarea id="message" name="message" rows="5" placeholder="Kerro tässä lemmikkisi laji, rotu ja mitä toimenpiteitä kaipaat..."></textarea>
+            </div>
+
+            <button type="submit" class="cta-button">Lähetä varauspyyntö</button>
+            </form>
+            <p><small>HUOM! *-merkityt pakollisia</small></p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Yhteystiedot</h4>
+                <p>+3580501234567<br>
+                info@polarpets.fi<br>
+                Tassukuja 7<br>
+                96100 Rovaniemi</p>
+            </div>
+            <div class="footer-column">
+                <h4>Eläinlääkäripalvelut</h4>
+                <p>Päivystys 24/7</p>
+            </div>
+            <div class="footer-column">
+                <h4>Trimmaamo</h4>
+                <p>Ma-Pe: 9-18<br>
+                La: sopimuksen mukaan<br>
+                Su: suljettu</p>
+            </div>
+            <div class="footer-column">
+                <h4>Lemmikkihotelli</h4>
+                <p>Avoinna 24/7</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

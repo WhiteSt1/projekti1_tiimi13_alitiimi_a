@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+
+.quicksand-font {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.nunito-font {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
+    font-family: Quicksand, sans-serif;
+}
+
+body {
+    background-color: #a4b89b;
+}
+
+header {
+    width: 100%;
+    background-color: #E9C46A;
+    border-bottom: 1px solid #CE8467;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.brand-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #333333;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.nav-button {
+    background-color: #007bff;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.content-intro {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prices-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    border-collapse: collapse; /* Poistetaan välit solujen välistä */
+    margin: 20px 0;
+    background-color: #8DAA91;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #6b915a;
+}
+
+tr:nth-child(even) {
+    background-color: #6b915a; /* Zebra-raidat */
+}
+
+.image-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.image-placeholder {
+    flex: 1;
+}
+
+.image-placeholder img {
+    width: 80%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+
+footer {
+    background-color: #E9C46A;
+    padding: 40px 20px;
+    border-top: 1px solid #CE8467;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333333;
+    display: inline-block;
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
