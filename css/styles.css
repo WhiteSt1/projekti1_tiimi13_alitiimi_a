@@ -74,6 +74,10 @@ nav a {
     border-radius: 5px;
 }
 
+.contact a:link {
+    text-decoration: none;
+}
+
 /* Footer */
 footer {
     background-color: #E9C46A;
