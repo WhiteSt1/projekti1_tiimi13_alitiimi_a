@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+img {
+    max-width: 100%; 
+    height: auto;     
+}
+   body { font-family: 'Open Sans', sans-serif; }
+h1, h2 { color: #2c3e50; }
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    align-items: center;            
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;   
+}
+
+header img {
+    width: 150px; 
+    height: auto;  
+}
+nav ul {
+    display: flex;                  
+    justify-content: flex-end;      
+    list-style: none;               
+    gap: 20px;                 
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background-color: white;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;   
+}
+
+/* ETUSIVUN TYYLIT */
+.hero {
+    text-align: center;
+    padding: 200px 20px;
+    background-image: url(hero-vaaka-koira.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    max-width: 1200px;
+    margin: 0 auto;   
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;   
+}
+.emergency {
+    text-align: center;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 15px;
+    padding: 80px 20px;  
+}
+.emergency h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: rgb(17, 67, 17); /* väri on vielä väärä */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    position: relative; 
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px;
+    transition: transform 0.2s, box-shadow 0.2s; 
+    background-color: #fff;
+    min-height: 450px;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    aspect-ratio: 16 / 9;
+    object-position: 80% 20%;
+}
+
+.card:hover .main-link {
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: #227d01;
+}
+
+.main-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; 
+}
+
+.content-section {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.content-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+.image-gallery {
+    display: flex;         
+    gap: 40px;            
+    justify-content: center; 
+    padding: 20px 0;      
+}
+
+.image-gallery img {
+    width: 40%;          
+    object-fit: cover;    
+    height: 400px;        
+    border-radius: 10px;  
+}
