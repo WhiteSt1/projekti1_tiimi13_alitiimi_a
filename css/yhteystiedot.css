@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
 
+/* fontit */
 .quicksand-font {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
@@ -38,6 +39,7 @@ body {
     background-color: #a4b89b;
 }
 
+/* Header */
 header {
     width: 100%;
     background-color: #E9C46A;
@@ -74,6 +76,7 @@ header {
     letter-spacing: 0.5px;
 }
 
+/* Navigointi */
 nav ul {
     list-style: none;
     display: flex;
@@ -86,17 +89,18 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #333333;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9rem;
 }
 
 .nav-button {
-    background-color: #007bff;
+    background-color: #c21d1d;
     color: white !important;
     padding: 8px 15px;
     border-radius: 5px;
 }
 
+/* Lomake */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -111,7 +115,18 @@ input, select, textarea {
 }
 
 @media (min-width: 768px) {
-    
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Kaksi tasan yhtä suurta saraketta */
+        gap: 40px;
+    }
+    table {
+        font-size: 1.1rem; /* Isompi teksti tietokoneella */
+    }
+    th, td {
+        padding: 20px; /* Enemmän ilmaa soluihin */
+    }
+    /* Tähän ehkä jotain tulevaisuudessa? */
 }
 
 form {
@@ -121,11 +136,12 @@ form {
     margin: 0 auto;
 }
 
+/* footer */
 footer {
     background-color: #E9C46A;
     padding: 40px 20px;
-    border-top: 1px solid #CE8467;
-    margin-top: 50px;
+    border-top: 1px solid #000000;
+    margin-top: 20px;
 }
 
 .footer-container {

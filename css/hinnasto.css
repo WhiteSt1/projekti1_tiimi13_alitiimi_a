@@ -31,6 +31,7 @@ body {
     background-color: #a4b89b;
 }
 
+/* Header */
 header {
     width: 100%;
     background-color: #E9C46A;
@@ -67,6 +68,7 @@ header {
     letter-spacing: 0.5px;
 }
 
+/* Navigointi */
 nav ul {
     list-style: none;
     display: flex;
@@ -90,6 +92,7 @@ nav a {
     border-radius: 5px;
 }
 
+/* Hinnasto taulukko */
 .content-intro {
     display: flex;
     justify-content: space-evenly;
@@ -120,12 +123,13 @@ tr:nth-child(even) {
     background-color: #6b915a; /* Zebra-raidat */
 }
 
-.image-grid {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 30px;
-    align-items: center;
+/* Kuvat */
+@media (min-width: 768px) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
 }
 
 .image-placeholder {
@@ -136,7 +140,7 @@ tr:nth-child(even) {
     width: 80%;
     height: auto;
     border: 1px solid #ccc;
-    border-radius: 5%;
+    border-radius: 2%;
     display: flex;
     justify-self: center;
     align-items: center;
@@ -145,6 +149,7 @@ tr:nth-child(even) {
     margin-bottom: 25px;
 }
 
+/* Footer */
 footer {
     background-color: #E9C46A;
     padding: 40px 20px;

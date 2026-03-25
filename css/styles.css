@@ -12,3 +12,95 @@
 * {
   font-family: Quicksand, sans-serif;
 }
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #E9C46A;
+    border-bottom: 1px solid #CE8467;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.brand-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #333333;
+    letter-spacing: 0.5px;
+}
+
+/* Navigointi */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.nav-button {
+    background-color: #007bff;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #E9C46A;
+    padding: 40px 20px;
+    border-top: 1px solid #CE8467;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333333;
+    display: inline-block;
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
