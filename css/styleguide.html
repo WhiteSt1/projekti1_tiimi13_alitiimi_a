@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polar Pets Style Guide</title>
+    <link rel="stylesheet" href="styleguide.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Polar Pets Style Guide</h1>
+        <section class="sg-section">
+            <h2>Logo</h2>
+            <div class="sg-logo-preview">
+                <img src="polar-pets-logo.png" alt="Polar Pets logo" class="styleguide-logo">
+            </div>
+            <p class="usage-note"><strong>Päätös:</strong> Logossa yhdistyy pehmeät muodot ja lämminhenkisyys. 
+            <br><strong>Perustelu:</strong> Fontin persoonallisuus tekee brändistä tunnistettavan ja lämpimän.</p>
+            <p><strong>Käyttöohje:</strong> Logoa käytetään aina navigointipalkin vasemmassa reunassa. Sen ympärillä on oltava vähintään 20px tyhjää tilaa (suoja-alue). Logosta tehty uusi versio värillä #FFF5EE, joka tulee nettisivuille.</p>        
+        </section>
+    <section class="sg-section">
+        <h2>1. Värit</h2>
+        <div class="sg-color-grid">
+            <div class="sg-swatch" style="background: var(--color-primary);">Primary</div>
+            <div class="sg-swatch" style="background: var(--color-secondary);">Secondary</div>
+            <div class="sg-swatch" style="background: var(--color-bg-warm); color: var(--color-text);">Warm BG</div>
+        </div>
+        <p>Väripaletti on valittu korostamaan lämpöä ja ammattitaitoa.</p>
+    </section>
+
+    <section id="typography">
+        <h2>2. Typografia</h2>
+        <h1>Tämä on pääotsikko, Fraunces-fontilla (H1)</h1>
+        <h2>Tämä on alaotsikko (H2)</h2>
+        <h3>Tämä on pienempi otsikko (H3)</h3>
+        <p>Tämä on tavallista leipätekstiä. Käytämme Fraunces-fonttia otsikoissa ja Quicksand-fonttia leipätekstissä, joka on pyöreä ja ystävällinen, mutta silti erittäin luettava. Se sopii hyvin eläinystävälliseen brändiimme.</p>
+        <p><strong> Tämä on lihavoitua tekstiä tärkeille asioille.</strong></p>
+        <p class="usage-note"><strong>Päätös:</strong> Valitsimme otsikoiden fontiksi Fraunces ja leipätekstin fontiksi Quicksand-fontin. 
+        <br><strong>Perustelu:</strong> Otsikot antavat ryhtiä sivustolle ja Quicksandin pyöristetyt muodot luovat pehmeän, ystävällisen ja helposti lähestyttävän vaikutelman. Tämä tukee yrityksen imagoa lemmikkien turvallisena ja lämpimänä palvelukeskuksena ja poistaa kliinisyyden tuntua.</p>
+        <p><strong>Käyttöohje:</strong> Käytä leipätekstiä kaikessa juoksevassa tekstissä, napeissa ja lomakkeissa. Riviväli väljä 1.6, jotta teksti säilyy ilmavana ja helposti luettavana.</p>
+    </section>
+    </section>
+
+    <section id="components">
+        <h2>3. Komponentit</h2>
+    
+    <article class="sg-item">
+        <h3>Ensisijainen painike</h3>
+        <div class="render"> <button class="btn-primary">Varaa aika</button> </div>
+    </article>
+    <p class="rationale"><strong>Päätös:</strong> Sivuston tärkein toiminto. 
+    <br><strong>Perustelu:</strong> Oranssi aksenttiväri erottuu rauhallisesta vihreästä ja ohjaa katsetta.</p>
+    <p><strong>Käyttöohje:</strong> Napeissa käytetään hoverointia, se parantaa käytettävyyttä antamalla käyttäjälle välittöman palautteen toiminnosta ja tekee sivustosta dynaamisen tuntuisen.</p>
+    
+    <h3>Header & navigointi</h3>
+    <nav class="main-nav">
+        <img src="polar-pets-uusi-logo.png" alt="Polar Pets" class="nav-logo-img">
+        <div class="nav-logo">Polar Pets</div>
+        <ul class="nav-links">
+            <li><a href="#">Etusivu</a></li>
+            <li><a href="#">Eläinlääkäri</a></li>
+            <li><a href="#">Trimmaus</a></li>
+            <li><a href="#">Hotelli</a></li>
+            <li><a href="#">Hinnasto</a></li>
+            <li><a href="#">Yhteystiedot</a></li>
+            <li><a href="#" class="btn-nav">Varaa aika</a></li>
+        </ul>
+    </nav>
+        <p class="rationale"><strong>Päätös:</strong> Navigointopalkki on pidetty ilmavana ja taustavärinä on käytetty havunvihreää. 
+        <br><strong>Perustelu:</strong> Tumma yläpalkki antaa sivulle selkeän raamin ja luotettavan ensivaikutelman. Responsiivinen toteutus Flexbox-asettelulla ja media query-säännöillä takaa, että kaikki sivut ovat saavutettavissa myös pienemmällä näytöllä ilman, että ulkoasu menee rikki.</p>
+        <p><strong>Käyttöohje:</strong> Käytetään jokaisen sivun yläreunassa. Mobiilikoossa (alle 1150px) navigointi pinoaa elementit allekain keskitetysti. "Varaa aika" -painike pidetään listan viimeisenä korostettuna elementtinä</p>
+    
+    <h3>Palvelukortti</h3>
+    <div class="service-card">
+    <div class="card-image-placeholder">
+    <span>[ Kuva ]</span>
+    </div>
+    <div class="card-content">
+        <h3>Eläinlääkäri</h3>
+        <p>Ammattitaitoinen hoito lemmikillesi</p>
+        <a href="#" class="card-link">Lue lisää &rarr;</a>
+    </div>
+    </div>
+        <p class="rationale"><strong>Päätös:</strong> Kortit käyttävät hienovaraista varjoa ja pyöristettyjä kulmia. 
+        <br><strong>Perustelu:</strong> Varjo tuo syvyyttä ja modernia ilmettä, kun taas pyöristys tukee eläinystävällistä brändiä. Kontrastiviiva kortin alalaidassa tuo eloisuutta sivulle.</p>
+        <p><strong>Käyttöohje:</strong> Käytetään etusivulla palveluiden listaukseen, kortin tulisi olla klikattava tai sisältää selkeä toimintolinkki.</p>
+       
+    </section>
+</div> 
+<h3>Footer</h3>
+<footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Yhteystiedot</h4>
+                <p>+3580501234567<br>
+                info@polarpets.fi<br>
+                Tassukuja 7<br>
+                96100 Rovaniemi</p>
+            </div>
+            <div class="footer-column">
+                <h4>Eläinlääkäripalvelut</h4>
+                <p>Päivystys 24/7</p>
+            </div>
+            <div class="footer-column">
+                <h4>Trimmaamo</h4>
+                <p>Ma-Pe: 9-18<br>
+                La: sopimuksen mukaan<br>
+                Su: suljettu</p>
+            </div>
+            <div class="footer-column">
+                <h4>Lemmikkihotelli</h4>
+                <p>Avoinna 24/7</p>
+            </div>
+        </div>
+    </footer>
+    <p class="rationale"><strong>Päätös:</strong> Tärkeimmät tiedot on tallessa, pidetään yksinkertaisena ja selkeänä. 
+        <br><strong>Perustelu:</strong> Sivusto pysyy yhtenäisenä ja helppolukuisena.</p>
+        <p><strong>Käyttöohje:</strong> Käytetään jokaisen sivun alareunassa. Yhteydtiedot selkeästi näkyvillä.</p>
+</body>
+</html>

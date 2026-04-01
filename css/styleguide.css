@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Quicksand:wght@400;600&display=swap');
+
+/* 1. MÄÄRITELLÄÄN MUUTTUJAT */
+:root {
+  /* Värit */
+  --color-primary: #2D423F;      /* Syvä havunvihreä */
+  --color-secondary: #D47A5D;    /* Murrettu oranssi */
+  --color-bg-light: #FFF5EE;     
+  --color-text: #36322E;         
+  /* Lisävärit */
+  --color-surface: #F5F1E9; 
+
+  /* Typografia (Varmista että nämä fontit on ladattu HTML:ssä!) */
+  --font-headings: 'Fraunces', serif;
+  --font-body: 'Quicksand', sans-serif;
+
+  /* Muodot */
+  --radius-lg: 16px;
+  --radius-md: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* MUUTTUJAT PERUSASETUKSISSA */
+body {
+  background-color: var(--color-bg-light);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-headings);
+  color: var(--color-primary);
+}
+
+/* ASETTELU */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sg-logo-display {
+    background-color: white; /* Tai --color-bg-light */
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-bg-warm);
+    margin-bottom: 20px;
+}
+
+.styleguide-logo {
+    max-width: 200px; /* Säädä logon koon mukaan */
+    height: auto;
+}
+
+/* APUTYYLIT */
+.sg-color-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.sg-swatch {
+    width: 100px;          
+    height: 100px;          
+    border-radius: 50%;     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: var(--shadow); 
+    border: 2px solid white
+}
+
+.sg-color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+/* NAVIGOINTI */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  max-width: 1200px;
+  margin: 20px auto;
+  width: 90%;
+}
+.nav-logo {
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  color: var(--color-bg-light);
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-bg-light);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-secondary);
+}
+
+.nav-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 40px;     
+    width: auto;        
+}
+
+.main-nav img, .nav-logo-img {
+    background-color: var(--color-primary); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    height: 50px;
+    width: auto;
+    display: block;
+    max-width: 150px;
+}
+
+/* VARAA AIKA -NAPPI */
+.nav-links .btn-nav {
+    background-color: var(--color-secondary); 
+    color: white !important;                 
+    padding: 8px 20px;                       
+    border-radius: 20px;                     
+    font-weight: 700;                        
+    transition: transform 0.3s, background-color 0.3s;
+    display: inline-block;                   
+    margin-left: 10px;                      
+}
+
+.nav-links .btn-nav:hover {
+    background-color: #D3765A;               
+    transform: translateY(-2px);             
+    color: white !important;
+}
+
+/* PALVELUKORTTI */
+.service-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden; 
+  max-width: 350px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(45, 66, 63, 0.1);
+  border-bottom: 3px solid var(--color-secondary);
+}
+
+.service-card:hover {
+  transform: translateY(-5px); 
+}
+
+.card-image-placeholder {
+  height: 200px;
+  background-color: var(--color-surface);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.card-link {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* BUTTON */
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Tämä tekee muutoksesta pehmeän, ei välähdystä */
+    box-shadow: 0 4px 10px rgba(233, 138, 109, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #D3765A;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 15px rgba(233, 138, 109, 0.4);
+    letter-spacing: 0.5px; 
+}
+
+/* FOOTER */
+.footer-container {
+    background-color: var(--color-primary); /* TUMMA VIHREÄ */
+    color: var(--color-surface);            /* Teksti vaalealla beigellä */
+    display: flex;            
+    justify-content: space-between; 
+    gap: 10px;                 
+    max-width: 1100px;         
+    margin: 0 auto;            
+    flex-wrap: wrap;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-radius: var(--radius-lg);
+}
+
+.footer-column {
+    flex: 1;                   
+    min-width: 200px;          
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none; 
+    padding: 0;
+}
+
+@media (max-width: 1150px) {
+    .main-nav {
+        flex-direction: column;
+        padding: 20px 10px;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .nav-logo-link {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .btn-nav {
+        margin-left: 0 !important;
+        margin-top: 5px;
+    }
+}
