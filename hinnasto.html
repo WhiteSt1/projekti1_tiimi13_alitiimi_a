@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polar Pets - Hinnasto</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/hinnasto.css">
     <meta name="description" content="Polar Pets - Hinnasto">
 </head>
 <body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span class="emergency-icon">🚨</span>
+            <strong>24/7 Päivystys:</strong> 
+            <a href="tel:+358507654321" class="emergency-phone">050 765 4321</a>
+        </div>
+    </div>
     <header>
         <div class="header-container">
             <div class="logo-area">
-                <img src="images/polar-pets-logo.png" width="180" height="180" alt="Polar Pets logo">
+                <img src="images/logo.png" width="80" height="80" alt="Polar Pets logo">
                 <div class="brand-text">
                     <h1>Polar Pets</h1>
-                    <p>Eläinlääkäri | Trimmaamo | Lemmikkihotelli</p>
+                    <p>Monipuolinen lemmikkien hoitola</p>
                 </div>
+            </div>
+
+            <div class="header-top-right">
+                <div class="header-contact-info">
+                    <a href="tel:+358501234567">📞 050 123 4567</a>
+                    <a href="mailto:info@polarpets.fi">✉️ info@polarpets.fi</a>
+                </div>
+                
+                <a href="ajanvaraus.html" class="nav-button">Ajanvaraus</a>
             </div>
         
             <nav>
@@ -26,8 +43,15 @@
                     <li><a href="hoitola.html">Lemmikkihotelli</a></li>
                     <li><a href="hinnasto.html">Hinnasto</a></li>
                     <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+                    <li><a href="ajanvaraus.html">Ajanvaraus</a></li>
                 </ul>  
             </nav>
+
+            <button class="menu-toggle" aria-label="Avaa valikko">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div> 
     </header>
      
@@ -37,44 +61,46 @@
             <p>Hinnastosta löydät yleisimpien palveluidemme hinnat. Huomioithan, että osa hinnoista on suuntaa antavia.</p>
         </section>
 
-        <section class="prices-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Palvelu</th>
-                        <th>Kuvaus</th>
-                        <th>Hinta (alkaen)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Koiran trimmaus</td>
-                        <td>Pesu ja leikkaus</td>
-                        <td>40€</td>
-                    </tr>
-                    <tr>
-                        <td>Eläinlääkäri</td>
-                        <td>Peruskäynti ja neuvonta</td>
-                        <td>60€</td>
-                    </tr>
-                    <tr>
-                        <td>Lemmikkihotelli</td>
-                        <td>Vuorokausihoito yhdelle lemmikille</td>
-                        <td>40€</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <section class="prices-accordion-container">
+            <p class="accordion-instruction">Klikkaa kategoriaa nähdäksesi tarkemmat hinnat.</p>
 
-        <section class="image-grid">
-            <div class="image-placeholder">
-                <img src="images/grooming1.jpg" alt="Koiran trimmaus menossa">
+        <details class="price-category">
+            <summary>Eläinlääkäripalvelut</summary>
+            <div class="price-list">
+                <div class="price-row"><span>Peruskäynti ja neuvonta</span> <span>60€</span></div>
+                <div class="price-row"><span>Rokotukset</span> <span>30€</span></div>
+                <div class="price-row"><span>Mikrosiru ja asennus</span> <span>20€</span></div>
+                <div class="price-row"><span>Hammashoito (alkaen)</span> <span>50€</span></div>
+                <div class="price-row"><span>Kirurgia (alkaen)</span> <span>80€</span></div>
             </div>
-            <div class="image-placeholder">
-                <img src="images/grooming2.jpg" alt="Kissa hoidossa">
+        </details>
+
+        <details class="price-category">
+            <summary>Trimmauspalvelut</summary>
+            <div class="price-list">
+                <div class="price-row"><span>Koiran trimmaus (sis. pesu)</span> <span>40€</span></div>
+                <div class="price-row"><span>Kynsien leikkaus</span> <span>15€</span></div>
+                <div class="price-row"><span>Pelkkä pesu ja kuivaus</span> <span>25€</span></div>
             </div>
+        </details>
+
+        <details class="price-category">
+            <summary>Lemmikkihotelli</summary>
+            <div class="price-list">
+                <div class="price-row"><span>Vuorokausihoito (1 lemmikki)</span> <span>40€</span></div>
+                <div class="price-row"><span>Viikonloppupaketti (Pe-Su)</span> <span>100€</span></div>
+                <div class="price-row"><span>Lisälemmikki samassa häkissä</span> <span>+15€</span></div>
+            </div>
+        </details>
         </section>
+            <div class="image-gallery">
+                <img src="images/grooming1.jpg" alt="Koiran trimmaus menossa" class="content-img">
+                <img src="images/grooming2.jpg" alt="Kissa hoidossa" class="content-img">
+            </div>
     </main>
+
+    <a href="#" class="back-to-top">↑ Takaisin ylös</a>
+    
     <footer>
         <div class="footer-container">
             <div class="footer-column">
@@ -100,6 +126,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav');
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    menuToggle.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>

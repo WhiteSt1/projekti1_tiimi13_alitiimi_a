@@ -1,168 +1,324 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+@import url('styles.css');
 
-/* fontit */
-.quicksand-font {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+/* --- YLEISET SIVUN TYYLIT --- */
+.page-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 60px auto 20px auto;
+    padding: 0 20px;
 }
 
-.nunito-font {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+.page-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--color-primary);
 }
 
-.montserrat-font {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+.page-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-primary);
 }
 
-.booking-form {
-    font-family: Nunito, sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+.info-text p {
+    display: block;
+    font-size: 0.95rem;
+    margin-top: 25px;
+    color: var(--color-secondary);
+    font-style: bold;
 }
 
-* {
-    font-family: Quicksand, sans-serif;
-}
-
-body {
-    background-color: #a4b89b;
-}
-
-/* Header */
-header {
-    width: 100%;
-    background-color: #E9C46A;
-    border-bottom: 1px solid #CE8467;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* --- YLÄOSAN KOLMEN KORTIN GRID --- */
+.contact-triple-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    flex-wrap: wrap;
+    margin: 40px auto;
+    padding: 0 20px;
+    align-items: stretch;
 }
 
-.logo-area {
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border-bottom: 5px solid var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px); /* Pieni nostoefekti tuo eloa */
+}
+
+.info-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-bg-light);
+    padding-bottom: 15px;
+}
+
+/* Kartta */
+.map-box {
+    padding: 0; 
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Yhteystiedot */
+.contact-item {
     display: flex;
     align-items: center;
-    gap: 15px;
-    flex-shrink: 0;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
 }
 
-.brand-text h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    line-height: 1.2;
+.contact-item strong {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 90px; /* Tämä linjaa kaksoispisteet pystysuunnassa */
 }
 
-.brand-text p {
-    margin: 0;
-    font-size: 0.8rem;
-    color: #333333;
-    letter-spacing: 0.5px;
-}
-
-/* Navigointi */
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333333;
+/* Linkkien tyylittely */
+.contact-item a {
+    color: var(--color-secondary);
+    text-decoration: none; /* Poistetaan oletusalleviivaus */
     font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--color-primary);
+    text-decoration: underline; /* Alleviivaus vain hiirellä päällä */
+}
+
+/* Päivystys-laatikon hienosäätö */
+.emergency-notice {
+    background-color: #FFF5F5; /* Hyvin vaalea punainen */
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border-left: 4px solid #c21d1d;
+    margin-top: 15px;
+}
+
+.emergency-notice strong {
+    color: #c21d1d;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 0.9rem;
 }
 
-.nav-button {
-    background-color: #c21d1d;
-    color: white !important;
-    padding: 8px 15px;
-    border-radius: 5px;
+.emergency-notice p {
+    margin-top: 5px;
+    color: var(--color-text);
 }
 
-/* Lomake */
+.emergency-notice a {
+    color: #c21d1d;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Aukioloajat */
+.hours-list-clean {
+    list-style: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.hours-list-clean li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 0.95rem;
+}
+
+.hours-list-clean li:last-of-type {
+    border-bottom: none;
+}
+
+.hotel-note-small {
+    margin-top: auto;
+    padding-top: 20px;
+    font-weight: bold;
+    color: var(--color-secondary);
+    text-align: center;
+    border: none !important;
+    font-size: 0.9rem;
+}
+
+/* --- LOMAKE (Grid-asettelu) --- */
+.form-section-full {
+    max-width: 1200px;
+    margin: 40px auto 80px;
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border-bottom: 5px solid var(--color-primary);
+}
+
+.form-section-full h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-section-full p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    margin-top: 25px;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-input, select, textarea {
-    padding: 10px;
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     font-family: inherit;
 }
 
-@media (min-width: 768px) {
-    .image-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Kaksi tasan yhtä suurta saraketta */
-        gap: 40px;
-    }
-    table {
-        font-size: 1.1rem; /* Isompi teksti tietokoneella */
-    }
-    th, td {
-        padding: 20px; /* Enemmän ilmaa soluihin */
-    }
-    /* Tähän ehkä jotain tulevaisuudessa? */
+.form-row-bottom {
+    grid-column: span 2;
+    margin-top: 10px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
+.form-row-bottom small {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+    font-style: italic;
+    font-size: 0.8rem;
 }
 
-/* footer */
-footer {
-    background-color: #E9C46A;
-    padding: 40px 20px;
-    border-top: 1px solid #000000;
-    margin-top: 20px;
+.form-group:has(input:required, select:required, textarea:required) label::after {
+    content: " *";
+    color: #c21d1d;
+    font-weight: bold;
 }
 
-.footer-container {
+input:focus:invalid {
+    border-color: #c21d1d; /* Punainen väri kun ei validi */
+    background-color: #fff8f8;
+}
+
+input:focus:valid {
+    border-color: #28a745; /* Vihreä väri kun validi */
+    background-color: #f8fff8;
+}
+
+/* --- UKK-OSIO --- */
+.faq-accordion-container {
+    max-width: 800px; /* Kasvatettu 500px -> 800px jotta sopii lomakkeen leveyteen paremmin */
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    border-bottom: 3px solid var(--color-secondary);
+    overflow: hidden;
+}
+
+.faq-item summary {
+    padding: 20px;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
 }
 
-.footer-column {
-    flex: 1;
-    min-width: 150px;
+.faq-item summary::after {
+    content: "▼";
+    font-size: 0.8rem;
 }
 
-.footer-column h4 {
-    margin-bottom: 15px;
-    border-bottom: 2px solid #333333;
-    display: inline-block;
-}
-
-.footer-column p {
-    font-size: 0.9rem;
+.faq-content {
+    padding: 20px;
+    background-color: #fcfcfc;
+    border-top: 1px solid #eee;
     line-height: 1.6;
+}
+
+/* --- LÄHETÄ-NAPPI --- */
+.cta-button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.02);
+}
+
+/* --- MOBIILI-OPTIMOINTI --- */
+@media (max-width: 992px) {
+    .contact-triple-grid {
+        grid-template-columns: 1fr; /* Kortit päällekkäin tabletilla/puhelimella */
+    }
+    
+    .contact-form-grid {
+        grid-template-columns: 1fr; /* Lomake yhteen sarakkeeseen */
+    }
+
+    .form-row-bottom {
+        grid-column: span 1;
+    }
+
+    .page-header h2 {
+        font-size: 2rem;
+    }
 }

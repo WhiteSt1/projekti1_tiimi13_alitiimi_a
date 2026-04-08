@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polar Pets - Ajanvaraus</title>
+    <title>Polar Pets - Yhteystiedot ja yhteydenottolomake</title>
     <link rel="stylesheet" href="css/yhteystiedot.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="description" content="Yhteystiedot sekä lomake">
 </head>
 <body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span class="emergency-icon">🚨</span>
+            <strong>24/7 Päivystys:</strong> 
+            <a href="tel:+358507654321" class="emergency-phone">050 765 4321</a>
+        </div>
+    </div>
     <header>
         <div class="header-container">
             <div class="logo-area">
-                <img src="images/polar-pets-logo.png" width="80" height="80" alt="Polar Pets logo">
+                <img src="images/logo.png" width="80" height="80" alt="Polar Pets logo">
                 <div class="brand-text">
                     <h1>Polar Pets</h1>
                     <p>Eläinlääkäri | Trimmaamo | Lemmikkihotelli</p>
                 </div>
+            </div>
+
+            <div class="header-top-right">
+                <div class="header-contact-info">
+                    <a href="tel:+358501234567">📞 050 123 4567</a>
+                    <a href="mailto:info@polarpets.fi">✉️ info@polarpets.fi</a>
+                </div>
+                
+                <a href="ajanvaraus.html" class="nav-button">Ajanvaraus</a>
             </div>
         
             <nav>
@@ -26,56 +42,162 @@
                     <li><a href="trimmaus.html">Trimmaus</a></li>
                     <li><a href="hoitola.html">Lemmikkihotelli</a></li>
                     <li><a href="hinnasto.html">Hinnasto</a></li>
-                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+                    <li><a href="yhteystiedot.html">Yhteystiedot & UKK</a></li>
+                    <li><a href="ajanvaraus.html">Ajanvaraus</a></li>
                 </ul>  
             </nav>
+
+            <button class="menu-toggle" aria-label="Avaa valikko">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div> 
     </header>
      
     <main>
-        <section class="booking-form">
-            <h2>Ajanvaraus</h2>
-            <p>Täytä alla olevat tiedot, niin olemme sinuun yhteydessä vahvistusta varten.</p>
+        <section class="page-header">
+            <h2>Yhteystiedot & UKK</h2>
+            <p>Olemme täällä sinua ja lemmikkiäsi varten. Voit ottaa yhteyttä meihin puhelimitse, sähköpostilla tai täyttämällä ohessa olevan yhteydenottolomakkeen.</p>
+            <p>Tarvittaessa voit käydä myös paikan päällä.</p>
+                <div class="info-text">
+                    <p>Usein kysytyt kysymykset löytyvät sivun lopusta.</p>
+                </div>
+        </section>
 
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Omistajan nimi *</label>
-                    <input type="text" id="name" name="name" required placeholder="Etunimi Sukunimi">
+        <div class="contact-triple-grid">
+            <address class="info-card">
+                <h3>Ota yhteyttä</h3>
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <strong>Puhelin:</strong> <a href="tel:+358501234567">+358 (0)50 123 4567</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">✉️</span>
+                    <strong>Sähköposti:</strong> <a href="mailto:info@polarpets.fi">info@polarpets.fi</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <strong>Osoite:</strong> <a href="https://www.google.fi/maps/place/Tassukuja+7,+96100+Rovaniemi" target="_blank">Tassukuja 7</a>
+                </div>
+                <div class="emergency-notice">
+                    <strong>🚨 Päivystys 24/7</strong>
+                    <p>Soita: <a href="tel:+358507654321">050 765 4321</a></p>
+                </div>
+            </address>
+
+            <div class="info-card map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d966126.5449233679!2d24.713157759908896!3d66.66551929437142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x442b4bbd76772553%3A0x158088adb48841c4!2sRovaniemi!5e1!3m2!1sfi!2sfi!4v1774888356067!5m2!1sfi!2sfi" width="100%" height="100%" style="border:0; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="info-card">
+                <h3>Aukioloajat</h3>
+                <ul class="hours-list-clean">
+                    <li><span>Ma-Pe:</span> <span>09:00 - 18:00</span></li>
+                    <li><span>La:</span> <span>Sopimuksen mukaan</span></li>
+                    <li><span>Su:</span> <span>Suljettu</span></li>
+                    <li class="hotel-note-small">Lemmikkihotelli palvelee 24/7</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="form-section-full">
+            <h3>Yhteydenottolomake</h3>
+            <p>Täytä tiedot, niin olemme sinuun yhteydessä mahdollisimman pian.</p>
+        
+            <form action="#" method="post" class="contact-form-grid">
+                <div class="form-col-left">
+                    <div class="form-group">
+                        <label for="name">Omistajan nimi</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required placeholder="Etunimi ja Sukunimi">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Puhelinnumero</label>
+                        <input type="tel" id="phone" name="phone" required pattern="^(\+358|0)\s?([0-9\s-]{2,12})$" placeholder="esim. 050 123 4567 tai +358 50 123 4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Sähköposti</label>
+                        <input type="email" id="email" name="email" placeholder="Sähköpostiosoite, esim. oma@gmail.com">
+                    </div>
                 </div>
 
-            <div class="form-group">
-                <label for="pet">Lemmikin laji *</label>
-                <select id="pet" name="pet" required>
-                    <option value="">--Valitse tästä--</option>
-                    <option value="cat">Kissa</option>
-                    <option value="dog">Koira</option>
-                    <option value="reptile">Matelija (esim. lisko, käärme)</option>
-                    <option value="bird">Lintu</option>
-                    <option value="rodent">Jyrsijä</option>
-                    <option value="other">Joku muu (kirjoita viestikenttään lomakkeen lopussa)</option>
-                </select>
-            </div>
+                <div class="form-col-right">
+                    <div class="form-group">
+                        <label for="pet">Lemmikin laji</label>
+                        <select id="pet" name="pet">
+                            <option value="">--Valitse tästä--</option>
+                            <option value="cat">Kissa</option>
+                            <option value="dog">Koira</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Valitse palvelu</label>
+                        <select id="service" name="service" required>
+                            <option value="">--Valitse tästä--</option>
+                            <option value="vet">Eläinlääkäri</option>
+                            <option value="grooming">Trimmaus</option>
+                            <option value="hotel">Lemmikkihotelli</option>
+                        </select>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label for="service">Valitse palvelu *</label>
-                <select id="service" name="service" required>
-                    <option value="">--Valitse tästä--</option>
-                    <option value="vet">Eläinlääkäri</option>
-                    <option value="grooming">Trimmaus</option>
-                    <option value="hotel">Lemmikkihotelli</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Tietoa lemmikistä ja toiveita ajankohdasta</label>
-                <textarea id="message" name="message" rows="5" placeholder="Kerro tässä lemmikkisi laji, rotu ja mitä toimenpiteitä kaipaat..."></textarea>
-            </div>
-
-            <button type="submit" class="cta-button">Lähetä varauspyyntö</button>
+                <div class="form-row-bottom">
+                    <div class="form-group">
+                        <label for="message">Lisätiedot</label>
+                        <textarea id="message" name="message" required rows="5" placeholder="Kerro tässä lisätiedot lemmikistäsi sekä toiveistasi..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Lähetä yhteydenottopyyntö</button>
+                    <p><small>HUOM! *-merkityt pakollisia</small></p>
+                </div>
             </form>
-            <p><small>HUOM! *-merkityt pakollisia</small></p>
+        </section>
+
+        <section class="faq-accordion-container">
+            <div class="content-intro">
+                <h2>Usein kysytyt kysymykset</h2>
+                <p class="accordion-instruction">Klikkaa kysymystä nähdäksesi vastauksen</p>
+            </div>
+
+            <details class="faq-item">
+                <summary>Miten voin perua tai siirtää varatun ajan?</summary>
+                <div class="faq-content">
+                    <p>Varatun ajan voi perua tai siirtää viimeistään 24 tuntia ennen sovittua ajankohtaa kuluitta. Peruutukset tehdään puhelimitse tai sähköpostilla.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Voiko hotelliin tuoda lemmikin oman pedin?</summary>
+                <div class="faq-content">
+                    <p>Kyllä voi! Tutut tuoksut auttavat lemmikkiä kotiutumaan hotelliin paremmin. Varmistathan vain, että peti on pesty ennen tuloa.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Pitääkö lemmikkihotelliin tuoda omat ruoat?</summary>
+                <div class="faq-content">
+                    <p>Suosittelemme tuomaan lemmikin oman tutun ruoan mukaan vatsavaivojen välttämiseksi. Tarvittaessa meiltä löytyy kuitenkin laadukkaita lemmikkiruokia lisämaksusta.</p>                    </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Mitä teen, jos lemmikkini tarvitsee apua yöllä?</summary>
+                <div class="faq-content">
+                    <p>Päivystämme 24/7 hätätapauksia varten. Soitathan aina ennen tuloasi päivystysnumeroomme: <strong>050 765 4321</strong>.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Kuinka kauan trimmaus yleensä kestää?</summary>
+                <div class="faq-content">
+                    <p>Trimmausaika riippuu lemmikin koosta ja turkin kunnosta, mutta yleensä käyntiin on hyvä varata 1–3 tuntia.</p>
+                </div>
+            </details>
         </section>
     </main>
+
+    <a href="#" class="back-to-top">↑ Takaisin ylös</a>
+
     <footer>
         <div class="footer-container">
             <div class="footer-column">
@@ -101,6 +223,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav');
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    menuToggle.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
