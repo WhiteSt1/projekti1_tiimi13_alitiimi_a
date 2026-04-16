@@ -461,6 +461,75 @@ nav a:hover {
     display: block;
 }
 
+/* Sisältösivukortit ell*/
+
+.service-details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.detail-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Kevyt varjo tuo syvyyttä */
+    border-bottom: 5px solid var(--color-secondary); /* Tehosteväri alareunaan */
+    text-align: left; /* Teksti pysyy helposti luettavana */
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px); /* Pieni noste, kun hiiri on päällä */
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto 20px auto;
+    background: none;
+    filter: drop-shadow(0 5px 8px rgba(45,66,63,0.2));
+    padding: 0; 
+}
+
+.detail-card h3 {
+    margin-top: 0;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.detail-card ul {
+    list-style: none; /* Poistetaan peruspallot */
+    padding: 0;
+}
+
+.detail-card li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Lisätään tyylikäs tassu tai pallo listan eteen */
+.detail-card li::before {
+    content: "•";
+    color: var(--color-secondary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.detail-card li:last-child {
+    border-bottom: none;
+}
+
 /* Kuvat */
 @media (min-width: 768px) {
     .image-grid {
