@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polar Pets - Eläinlääkäri</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-            <h1>Polar Pets</h1>
-            <div>Eläinlääkäri<br>
-            Trimmaus<br>
-            Lemmikkihotelli
+            <div class="header-container">
+            <div class="logo-area">
+                <img src="images/logo.png" width="80" height="80" alt="Polar Pets logo">
+                <div class="brand-text">
+                    <h1>Polar Pets</h1>
+                    <p>Eläinlääkäri | Trimmaamo | Lemmikkihotelli</p>
+                </div>
             </div>
-            <img src="images/polar-pets-logo.png" width="200" height="200" alt="Yrityksen logo, jossa on koira ja kissa sekä teksti Polar Pets">
+            <button class="menu-toggle" aria-label="Avaa valikko">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
         <nav>
             <ul>
                 <li><a href="index.html" class="cta-button">Etusivu</a></li>
@@ -27,17 +35,21 @@
         </nav>    
      </header>
    <main>
-        <section class="content-section">
-            <h2>Ajanvaraus</h2>
-            <p>Täällä on Polar Petsin oma ajanvarausjärjestelmä!</p>
+        <section class="header-container">
+            <div class="container">
+                <h2>Ajanvaraus</h2>
+                <p>Täällä on Polar Petsin oma ajanvarausjärjestelmä!</p>
             
-            
-            <div class="image-gallery">
-                <img src="images/ajanvaraus-koira.jpeg" alt="koira lepuuttaa päätä pöydällä, kuvituskuva" class="content-img">
-                <img src="images/ajanvaraus-koira-tietokone.jpg" alt="koira makaa sängyllä tietokone edessä, kuvituskuva" class="content-img">
-            </div>   
+                <div class="image-gallery">
+                    <img src="images/ajanvaraus-koira.jpeg" alt="koira lepuuttaa päätä pöydällä, kuvituskuva" class="content-img">
+                    <img src="images/ajanvaraus-koira-tietokone.jpg" alt="koira makaa sängyllä tietokone edessä, kuvituskuva" class="content-img">
+                </div> 
+            </div>  
         </section>
     </main>
+
+    <a href="#" class="back-to-top">↑ Takaisin ylös</a>
+    
     <footer>
         <div>Yhteystiedot:<br>
         +3580501234567<br>
@@ -58,5 +70,18 @@
         </div>
     
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav');
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    menuToggle.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
