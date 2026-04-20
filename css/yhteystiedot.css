@@ -77,7 +77,7 @@
 }
 
 /* Yhteystiedot */
-.contact-item {
+.contact-info {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -85,7 +85,7 @@
     font-size: 0.9rem;
 }
 
-.contact-item strong {
+.contact-info strong {
     color: var(--color-primary);
     font-size: 0.9rem;
     letter-spacing: 1px;
@@ -93,7 +93,7 @@
 }
 
 /* Linkkien tyylittely */
-.contact-item a {
+.contact-info a {
     color: var(--color-secondary);
     text-decoration: none; /* Poistetaan oletusalleviivaus */
     font-weight: 600;
@@ -101,7 +101,7 @@
     transition: color 0.3s ease;
 }
 
-.contact-item a:hover {
+.contact-info a:hover {
     color: var(--color-primary);
     text-decoration: underline; /* Alleviivaus vain hiirellä päällä */
 }
