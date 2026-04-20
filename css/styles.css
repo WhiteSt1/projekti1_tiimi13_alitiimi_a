@@ -260,17 +260,22 @@ nav a:hover {
 }
 
 .nav-button {
-    background-color: var(--color-secondary);
-    color: white !important;
+    display: inline-block;    /* Varmistaa että näkyy */
+    background-color: var(--color-secondary); /* Oranssi pohja */
+    color: white !important;  /* Valkoinen teksti */
     padding: 10px 20px;
-    border-radius: 50px;
     text-decoration: none;
+    border-radius: 50px;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-    background-color: #a01818;
-    transform: scale(1.05);
+    background-color: transparent;
+    border-color: var(--color-secondary);
+    columns: var(--color-secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 122, 93, 0.6); !important;
 }
 
 .contact a:link {
@@ -689,4 +694,143 @@ html {
     font-weight: bold;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
     z-index: 100;
+}
+
+/* Ikonien säädöt */
+.contact-item .icon, 
+.top-bar-content .emergency-icon, 
+.header-contact-info span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;           /* Hieman pienempi koko sopii paremmin yläpalkkiin */
+    height: 35px;
+    background-color: var(--color-surface); /* Käytetään styles.css muuttujaa */
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.top-bar-content .emergency-icon {
+    background-color: rgba(255, 255, 255, 0.2); /* Läpinäkyvä valkoinen tummalla pohjalla */
+    margin-right: 8px;
+}
+
+.header-contact-info div {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+/* Ikonien muotoilua */
+.top-bar-content, 
+.header-contact-row, 
+.contact-item {
+    display: flex;
+    align-items: center; /* TÄMÄ keskittää sisällön pystysuunnassa */
+    gap: 12px;           /* Väli ikonin ja tekstin välille */
+}
+
+/* Ikoneiden yhteinen tyyli (pyöreä tausta) */
+.emergency-icon, 
+.header-icon, 
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-surface); /* Käytetään styles.css:n muuttujaa */
+    border-radius: 50%;
+    flex-shrink: 0;         /* Estää ikonia menemästä kasaan */
+    overflow: hidden;       /* Pitää kuvan ympyrän sisällä */
+}
+
+/* Kuvien (img) hienosäätö ikonien sisällä */
+.emergency-icon img, 
+.header-icon img, 
+.icon img {
+    max-width: 60%;         /* Kuva ei täytä koko ympyrää, näyttää siistimmältä */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Erityishuomio yläpalkin (top-bar) tummalle pohjalle */
+.top-bar .emergency-icon {
+    background-color: rgba(255, 255, 255, 0.2); /* Läpinäkyvä valkoinen */
+}
+
+/* Varmistetaan, että linkit eivät hyppää omalle rivilleen */
+.header-contact-row a, 
+.contact-item a {
+    line-height: 1;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    /* Headerin elementit päällekkäin */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    /* Logo ja teksti keskelle */
+    .logo-area {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    /* Yhteystiedot ja painike allekkain */
+    .header-top-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .header-contact-info {
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-contact-row {
+        justify-content: center;
+    }
+
+    /* Ajanvaraus-nappi koko leveydelle tai selkeästi keskelle */
+    .nav-button {
+        width: 80%;
+        text-align: center;
+        margin: 10px 0;
+        background-color: var(--color-secondary);
+        color: white;
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        border: 2px solid var(--color-secondary);
+        display: inline-block;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 50px;
+        margin-top: 30px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(212, 122, 93, 0.4);
+    }
+
+    .nav-button:hover {
+        background-color: transparent;
+        border-color: var(--color-secondary);
+        columns: var(--color-secondary);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(212, 122, 93, 0.6);
+    }
+
+    /* Yläpalkin tekstin skaalaus pienemmäksi */
+    .top-bar-content {
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
