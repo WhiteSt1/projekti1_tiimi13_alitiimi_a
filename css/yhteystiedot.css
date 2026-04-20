@@ -92,6 +92,13 @@
     min-width: 90px; /* Tämä linjaa kaksoispisteet pystysuunnassa */
 }
 
+.contact-info {
+    display: flex;
+    justify-content: left;
+    align-items: center; /* TÄMÄ keskittää sisällön pystysuunnassa */
+    gap: 12px;           /* Väli ikonin ja tekstin välille */
+}
+
 /* Linkkien tyylittely */
 .contact-info a {
     color: var(--color-secondary);
