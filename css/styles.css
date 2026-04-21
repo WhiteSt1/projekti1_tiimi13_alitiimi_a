@@ -112,7 +112,7 @@ h1, h2, h3 {
     text-decoration: none !important;
 }
 
-/* Erityinen tyyli "Ota yhteyttä" -napille tässä osiossa */
+/* Erityinen tyyli "Ota yhteyttä" -painikkeelle tässä osiossa */
 .emergency .cta-button.secondary {
     background-color: var(--color-secondary);
     color: white;
@@ -376,7 +376,7 @@ nav a:hover {
 
 .hero h2 {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Lisää luettavuutta */
 }

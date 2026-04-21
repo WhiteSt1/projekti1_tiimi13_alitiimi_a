@@ -2,22 +2,33 @@
 
 /* --- YLEISET SIVUN TYYLIT --- */
 .page-header {
+    /* Ladataan kuva ja lisätään tumma huntu (rgba 0,0,0,0.5) sen päälle */
+    background: linear-gradient(rgba(45, 66, 63, 0.7), rgba(45, 66, 63, 0.7)), 
+                url('../images/ytukk.png');
+    
+    background-size: cover;       /* Kuva täyttää koko alueen */
+    background-position: center;   /* Kuva pysyy keskellä */
+    padding: 100px 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-    max-width: 800px;
-    margin: 60px auto 20px auto;
-    padding: 0 20px;
+    color: white;   /* Teksti valkoiseksi tumman kuvan päällä */
 }
 
 .page-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 15px;
-    color: var(--color-primary);
+    color: white;
+    text-shadow: 1px 2px 1px var(--color-primary);
 }
 
 .page-header p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: var(--color-primary);
+    text-shadow: 1px 2px 1px var(--color-text);
 }
 
 .info-text p {
@@ -26,6 +37,7 @@
     margin-top: 25px;
     color: var(--color-secondary);
     font-style: bold;
+    text-shadow: 1px 2px 1px var(--color-text);
 }
 
 /* --- YLÄOSAN KOLMEN KORTIN GRID --- */
