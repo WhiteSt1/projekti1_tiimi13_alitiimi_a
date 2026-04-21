@@ -4,7 +4,7 @@
 .page-header {
     /* Ladataan kuva ja lisätään tumma huntu (rgba 0,0,0,0.5) sen päälle */
     background: linear-gradient(rgba(45, 66, 63, 0.7), rgba(45, 66, 63, 0.7)), 
-                url('../images/ytukk.png');
+                url('../images/ytukk.webp');
     
     background-size: cover;       /* Kuva täyttää koko alueen */
     background-position: center;   /* Kuva pysyy keskellä */
@@ -26,6 +26,7 @@
 }
 
 .page-header p {
+    max-width: 600px;
     font-size: 1.1rem;
     line-height: 1.6;
     text-shadow: 1px 2px 1px var(--color-text);
