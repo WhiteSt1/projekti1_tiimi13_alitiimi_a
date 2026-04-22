@@ -284,6 +284,25 @@ nav a:hover {
     text-decoration: none;
 }
 
+/* Aktiivisen linkin tyyli */
+nav a.active {
+    color: var(--color-secondary) !important; /* Vaihtaa tekstin värin oranssiksi */
+    border-bottom: 2px solid var(--color-secondary); /* Lisää viivan tekstin alle */
+    padding-bottom: 5px;
+}
+
+/* Jos halutaan, että aktiivinen linkki ei reagoi hover-efektiin */
+nav a.active:hover {
+    cursor: default;
+    opacity: 1;
+}
+
+/* Ajanvaraus-napin korostus, kun ollaan kyseisellä sivulla */
+.nav-button.active {
+    background-color: var(--color-primary); /* Muutetaan tausta tummanvihreäksi */
+    border: 2px solid var(--color-secondary);
+}
+
 /* Hampurilaisnavigointi */
 .menu-toggle {
     display: none; /* Piilossa tietokoneella */
