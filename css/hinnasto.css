@@ -3,7 +3,7 @@
 .content-intro {
     /* Ladataan kuva ja lisätään tumma huntu (rgba 0,0,0,0.5) sen päälle */
     background: linear-gradient(rgba(45, 66, 63, 0.7), rgba(45, 66, 63, 0.7)), 
-                url('../images/hinnasto-kissa.jpg');
+                url('../images/hinnasto-kissa.webp');
     
     background-size: cover;       /* Kuva täyttää koko alueen */
     background-position: center;   /* Kuva pysyy keskellä */
