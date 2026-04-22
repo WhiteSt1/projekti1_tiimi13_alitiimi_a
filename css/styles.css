@@ -391,7 +391,7 @@ nav a.active:hover {
 }
 
 .elainlaakari-hero {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/koira.ell.jpg) !important;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/koira.ell.webp) !important;
 }
 
 .hero h2 {
@@ -550,6 +550,39 @@ nav a.active:hover {
     border-bottom: 1px solid #f0f0f0;
     position: relative;
     padding-left: 25px;
+}
+
+.kuvakortti-wrapper {
+    display: flex;
+    gap: 30px; /* Väli korttien välissä */
+    justify-content: center;
+    flex-wrap: wrap; /* Tiputtaa kortit allekkain mobiilissa */
+    margin: 40px 0;
+}
+
+.kuvakortti {
+    flex: 1;
+    min-width: 300px; 
+    height: 400px;
+    border-radius: 15px; /* Sama pyöristys kuin muissa korteissa */
+    overflow: hidden; /* Varmistaa, että kuva ei karkaa pyöristettyjen kulmien yli */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Kevyt varjo, kuten muissakin */
+    background-color: white;
+    border-bottom: 8px solid #D47A5D;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.kuvakortti:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.kuvakortti img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pitää kuvat nätteinä, vaikka ne olisivat eri muotoisia */
+    display: block;
 }
 
 /* Lisätään tyylikäs tassu tai pallo listan eteen */
